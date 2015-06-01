@@ -1,0 +1,5 @@
+##Setting your working directory
+getwd() #to get default wd
+dir() #list of file in wd
+#To change directory: File > Change dir... > Browse for folder
+#min4:00
