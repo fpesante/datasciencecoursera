@@ -1,5 +1,14 @@
 ##Setting your working directory
 getwd() #to get default wd
+ls() #list functions in the script or file
 dir() #list of file in wd
 #To change directory: File > Change dir... > Browse for folder
-#min4:00
+source() #to load codes in the file
+
+##Overview and history of R
+###A dialect of S. The book: Programming with Data by John Chambers. Document version 4 of S. A reference book for this workshop. www.stat.bell-labs.com/S/history.html
+###Core group: control the source code for R.
+###Syntax and semantics similar to S. Community in R-help and R-devel as well as StackOverflow.
+###Free software foundation www.fsf.org
+###Drawbacks: objects must generally be stored in physical memory (odbc?).
+#min11:08  12/16
