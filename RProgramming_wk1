@@ -12,7 +12,7 @@ source() #to load codes in the file
 ##########################
 #A dialect of S. The book: Programming with Data by John Chambers. Document version 4 of S. A reference book for this workshop. www.stat.bell-labs.com/S/history.html
 #Core group: control the source code for R.
-#Syntax and semantics similar to S. Community in R-help and R-devel as well as StackOverflow.
+#Syntax and semantics similar to S. Community in R-help (r-help@r-project.org) and R-devel (developers) as well as StackOverflow.
 #Free software foundation www.fsf.org
 #Drawbacks: objects must generally be stored in physical memory (odbc?).
 #Design: Base system - CRAN (developed by users and programmers) | Recommended Packages | ej. bioconductor.org
@@ -21,3 +21,26 @@ source() #to load codes in the file
 #############
 #Getting help
 #############
+#Search the archives of the forum
+#Google the error message (cut and paste it)
+#Read the manual
+#FAQ
+#Read the source code
+#Post in the discussion board
+##The problem should be reproducible (dataset and code)
+##What is your expectation?
+##Version of the product
+##Operating system
+##examples of subject header: "R 3.0.2 lm() funtion on Mac OS  --seg fault on large data frame"
+##Describe the goal, not the steps
+
+###############################
+#R Console Input and Evaluation
+###############################
+#entering input expressions either numerical or characters strings (msg <- "hello")
+# ":" operator to create integer sequence (x <-1:20)
+
+
+#######################################
+# Data Types - R Objects and Attributes
+#######################################
