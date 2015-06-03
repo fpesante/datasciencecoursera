@@ -44,3 +44,12 @@ source() #to load codes in the file
 #######################################
 # Data Types - R Objects and Attributes
 #######################################
+#Atomic objects:
+##character
+##numerical
+##integer
+##complex
+##logical
+#Basic objects:
+##vector; only contains objects of the same class. Except for the list. To create them use the empty funtion: vector()
+2:21
