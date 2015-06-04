@@ -51,5 +51,20 @@ source() #to load codes in the file
 ##complex
 ##logical
 #Basic objects:
-##vector; only contains objects of the same class. Except for the list. To create them use the empty funtion: vector()
-2:21
+##vector; only contains objects of the same class. Except for the list. To create them use the empty funtion: "vector(*[class],*[lenght])"
+#L suffix to specify explicitly that you want an integer ex: "1L"
+#"Inf" for infinity
+#"NaN not a number"
+#"attributes()" to set or modify the attributes of the file
+##"dim()"
+##"class()"
+##"lenght()"
+
+##############################
+# Data Types: Vector and Lists
+##############################
+
+#"c()" to create vector of objects
+# vector function "x <- vector ("numeric", length = 10)
+1:10
+
