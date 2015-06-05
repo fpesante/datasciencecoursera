@@ -66,5 +66,46 @@ source() #to load codes in the file
 
 #"c()" to create vector of objects
 # vector function "x <- vector ("numeric", length = 10)
-1:10
+#for diff object R will create the leat common denominator (lcd); number, character, logical (implicit coercion)
+#Explicit coercion: to turn to other formats "as"
+#     x <- 0:6
+#     class(x)
+#     as.numeric(x)
+#     as.logical(x)
+#     as.character(x)
+#List: like a vector but with objects of diff kinds ex. "x <- list(1, "a", TRUE, 1 +4i)" results in 4 vectors
+
+######################
+# Data Types: Matrices
+######################
+
+#Vectors with dimensions attribute. Constructed columnwise.
+#     m <- matrix(nrow = 2, ncol = 3)
+#dimensions
+#     dim(m)
+#     attributes(m)
+#     m <- matrix(1:6, nrow = 2, ncol = 3)
+#created from a vector
+#     m <- 1:10
+#2 rows, 5 cols
+#     dim(m) <- c(2,5) 
+#binding cols and rows
+#     x <- 1:3
+#     y <- 10:12
+#     cbind(x,y)
+#     rbind(x,y)
+
+#####################
+# Data Types: Factors
+#####################
+
+#vectors for categorical data either ordered (adj prof, aux prof, full prof) or unordered (male and female)
+#     x <- factor(c("yes", "yes", "no", "yes", "no"))
+#                 levels = c("yes", "no"))
+#     table(x)
+#     unclass(x)
+
+############################
+# Data Types: Missing Values
+############################
 
