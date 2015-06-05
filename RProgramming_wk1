@@ -1,15 +1,15 @@
-###############################
-#Setting your working directory
-###############################
+################################
+# Setting your working directory
+################################
 getwd() #to get default wd
 ls() #list functions in the script or file
 dir() #list of file in wd
 #To change directory: File > Change dir... > Browse for folder
 source() #to load codes in the file
 
-##########################
-#Overview and history of R
-##########################
+###########################
+# Overview and history of R
+###########################
 #A dialect of S. The book: Programming with Data by John Chambers. Document version 4 of S. A reference book for this workshop. www.stat.bell-labs.com/S/history.html
 #Core group: control the source code for R.
 #Syntax and semantics similar to S. Community in R-help (r-help@r-project.org) and R-devel (developers) as well as StackOverflow.
@@ -18,9 +18,9 @@ source() #to load codes in the file
 #Design: Base system - CRAN (developed by users and programmers) | Recommended Packages | ej. bioconductor.org
 #references http://www.r-project.org/doc/bib/R-books.html
 
-#############
-#Getting help
-#############
+##############
+# Getting help
+##############
 #Search the archives of the forum
 #Google the error message (cut and paste it)
 #Read the manual
@@ -34,9 +34,9 @@ source() #to load codes in the file
 ##examples of subject header: "R 3.0.2 lm() funtion on Mac OS  --seg fault on large data frame"
 ##Describe the goal, not the steps
 
-###############################
-#R Console Input and Evaluation
-###############################
+################################
+# R Console Input and Evaluation
+################################
 #entering input expressions either numerical or characters strings (msg <- "hello")
 # ":" operator to create integer sequence (x <-1:20)
 
