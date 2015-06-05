@@ -140,6 +140,54 @@ source() #to load codes in the file
 # Data Types: Names Attributes
 ##############################
 
+#Name objects
 #     x <- 1:3
 #     names(x)
 #     names(x) <- c("foo", "bar", "norf")
+#Name list
+#      x <- list(a = 1, b = 2, c = 3)
+#      x 
+#Name matrix
+#      m <- matrix(1:4, nrow = 2, ncol = 2)
+#      dimnames(m) <- list(c("a", "b"), c("c", "d"))
+#      m
+
+######################
+# Reading Tabular Data
+######################
+
+read text files and make dataframes
+      read.table
+      read.csv
+       
+read any kind of lines of a text files
+      readLines
+      
+Reading R code files (inverse of dump) 
+      source
+    
+Reading R code files (inverse of dput)     
+      dget
+      
+Reading in saved workspaces
+      load
+ Reading binary objects    
+      unserialize
+      
+#analogous functions for writing data to files
+#     write.table
+#     writeLines
+#     dump
+#     dput
+#     save
+#     serialize
+
+#read.table functions
+        file, the name of a file, or a connection
+        header, logical indicating if the file has a header line
+        sep, a string indicating how the columns are separated
+        colClasses, a character vector indicating the class of each column in the dataset
+        nrows, the number of rows in the dataset
+        comment.char, a character string indicating the comment character
+        skip, the number of lines to skip from the beginning
+        stringsAsFactors, should character variables be coded as factors?
