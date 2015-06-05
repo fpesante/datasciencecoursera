@@ -109,3 +109,37 @@ source() #to load codes in the file
 # Data Types: Missing Values
 ############################
 
+#Na or NaN
+#test objects if there are NA 
+#     is.na()
+#test objects if there are NaN
+#     is.nan()
+# NaN -> NA ; not the reverse
+#example; logical test
+#     x <- c(1, 2, NA, 10, 3)
+#     is.na(x)
+
+#########################
+# Data Types: Data Frames
+#########################
+
+#used to store tabular data. List to have the same length. But not necc from the same type or classes.
+#every row could have a name
+#     row.names
+#usually created by calling
+#     read.table() 
+#     read.csv()
+#converted (coersed) to matrix by calling
+#     data.matrix()
+#     x <- data.frame(foo = 1:4, bar = c(T, T, F, F))
+#     x
+#     nrow(x)
+#     ncol(x)
+
+##############################
+# Data Types: Names Attributes
+##############################
+
+#     x <- 1:3
+#     names(x)
+#     names(x) <- c("foo", "bar", "norf")
