@@ -156,23 +156,22 @@ source() #to load codes in the file
 # Reading Tabular Data
 ######################
 
-read text files and make dataframes
-      read.table
-      read.csv
-       
-read any kind of lines of a text files
-      readLines
-      
-Reading R code files (inverse of dump) 
-      source
+#read text files and make dataframes
+#      read.table
+#           ex. data <- read.table("foo.txt")
+#      read.csv
+#       
+#read any kind of lines of a text files
+#      readLines
+#      source
     
-Reading R code files (inverse of dput)     
-      dget
+#Reading R code files (inverse of dput)     
+#      dget
       
-Reading in saved workspaces
-      load
- Reading binary objects    
-      unserialize
+#Reading in saved workspaces
+#      load
+#Reading binary objects    
+#      unserialize
       
 #analogous functions for writing data to files
 #     write.table
@@ -183,11 +182,50 @@ Reading in saved workspaces
 #     serialize
 
 #read.table functions
-        file, the name of a file, or a connection
-        header, logical indicating if the file has a header line
-        sep, a string indicating how the columns are separated
-        colClasses, a character vector indicating the class of each column in the dataset
-        nrows, the number of rows in the dataset
-        comment.char, a character string indicating the comment character
-        skip, the number of lines to skip from the beginning
-        stringsAsFactors, should character variables be coded as factors?
+#name of a file, or a connection
+#     file
+#        header, logical indicating if the file has a header line
+#        sep, a string indicating how the columns are separated
+#        colClasses, a character vector indicating the class of each column in the dataset
+#        nrows, the number of rows in the dataset
+#        comment.char, a character string indicating the comment character
+#the number of lines to skip from the beginning
+#     skip
+#character variables be coded as factors        
+#     stringsAsFactors
+
+######################
+# Reading Large Tables
+######################
+
+Read the help page for read.table
+
+Make  a  rough  calculation  of  the  memory  required  to  store  your  dataset (ram and other applications running)
+
+Set comment.char = "" if there are no commented lines in your file
+##
+example
+1,500,000 × 120 × 8 bytes/numeric
+= 1440000000 bytes
+= 1440000000 /2^20 bytes/MB
+= 1,373.29 MB
+= 1.34 GB   so you'll need at leat twice for processing.
+
+##
+Use  the "colClasses" argument.  Specifying  this  option  instead  of  using  the  default  can  make 'read.table' run MUCH faster. In order to use this option, you have to know the class  of  each  column  in  your  data  frame.  If  all  of  the  columns  are  “numeric”,  for  example,  then
+you  can  just  set colClasses = "numeric" 
+To  figure  out  the  classes  of each column is the following:
+
+      initial <- read.table("datatable.txt", nrows = 100)
+      classes <- sapply(initial, class)
+      tabAll <- read.table("datatable.txt",
+                           colClasses = classes)
+                           
+Set "nrows". Helps with memory usage. 
+
+######################
+# Textual Data Formats
+######################
+
+dput()
+dump()
