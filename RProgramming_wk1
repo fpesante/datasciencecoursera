@@ -317,7 +317,13 @@ x <- readLines(con)
         u <- x "a"
         u
         x[u]
-[[
-to extract single elements of a list or a data frame
-$
-extract elements of a list by name
+        
+"[[" to extract single elements of a list or a data frame
+    x <- list(foo = 1:4, bar = 0.6)
+    x[1]
+    x[[1]]
+    
+"$" extract elements of a list by name
+    x$bar
+    x[["bar"]]
+    x["bar"]
