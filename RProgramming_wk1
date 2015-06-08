@@ -327,3 +327,7 @@ x <- readLines(con)
     x$bar
     x[["bar"]]
     x["bar"]
+
+selecting multiple elements
+    x <- list(foo = 1:4, bar = 0.6, baz = "hello")
+    x[c(1, 3)]
