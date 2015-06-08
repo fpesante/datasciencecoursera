@@ -408,3 +408,45 @@ Running in paralell multiple functions (by row)
         x * y ## element-wise multiplication
         x / y
         x %*% y ## true matrix multiplication
+
+
+###########
+x <- read.csv("C:/Users/francisco.pesante/Documents/2015/academias/r-programming/rprog_data_quiz1_data/hw1_data.csv")
+
+Q11
+dimnames(x)
+
+Q12
+x [1:2,]
+
+Q13
+dim(x)
+
+Q14
+x [152:153,]
+
+Q15
+dim(x)
+x[47,]
+x [47,1] 
+
+Q16
+y <-is.na(x[,1])
+sum(y)
+table(y)["TRUE"]
+
+Q17
+m <- is.na(x[,1])
+mean(x[!m,1])
+
+Q18
+#b <-[,1] > ; a <- ([,4] > 90)
+
+#o <- x[1]>31; t <- x[4]>90
+m <- is.na(x[,1]); n <- is.na(x[,4])
+#x[!m,1]>30; x[!n,4]>90)
+m2 <- x[!m,1]; n2 <- x[!n,4]
+#list(x[,1] > 30, x[,4] > 90)
+
+temp <-list(m2, n2)
+list(temp, mean(x[,2]))
