@@ -29,6 +29,42 @@ else  {
         0
 }
 
+###############################
+# Control Structures: For loops
+###############################
+
+for loops take an interator variable and assign it successive values from a sequence or vector.
+                for(i in 1:10) {
+                	print(i)
+                }
+                
+#####
+
+                x <- c("a", "b", "c", "d")
+                for(i in 1:4) {
+                	print(x[i])
+                }
+                
+                for(i in seq_along(x)) {
+                	print(x[i])
+                }				#same process as above
+                
+                for(letter in x) {		
+                	print(letter)
+                }				#same process as above
+                
+                for(i in 1:4) print(x[i])
+#####
+nested for loops
+
+                x <- matrix(1:6, 2, 3)
+                for(i in seq_len(nrow(x))) {
+                	for(j in seq_len(ncol(x))) {
+                		print(x[i, j])
+                	}
+                }
+#2 rows, 3 columns repeated in a vector arrangement?
+                
 ##############################
 # 
 ##############################
