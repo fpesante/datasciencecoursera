@@ -65,6 +65,70 @@ nested for loops
                 }
 #2 rows, 3 columns repeated in a vector arrangement?
                 
-##############################
-# 
-##############################
+#################################
+# Control Structures: While loops
+#################################
+
+count <- 0
+while(count < 10) {
+	print(count)
+	count <- count + 1
+}
+
+#Important to establish a hard limit
+
+z <- 5
+while(z >= 3 && z <= 10) {
+	print(z)
+	coin <- rbinom(1, 1, 0.5)
+
+	if(coin == 1) { ## random walk
+		z <- z + 1
+	} else {
+		z <- z - 1
+	}
+}
+
+#################################
+# Control Structures: Repeat, next, return
+#################################
+
+#Repeat: infinite loop. To exit, must call a break.
+
+x0 <- 1
+tol <- 1e-8
+
+repeat {
+	x1 <- computeEstimate() #not a function
+
+	if(abs(x1 - x0) < tol) {
+		break
+	} else {
+		x0 <- x1
+	}
+}
+
+#Next: to skip an iteration for loop
+
+for(i in 1:100) {
+	if(i <= 20) {
+		## Skip the first 20 iterations
+		next
+	}
+	## Do something here
+}
+
+Repeat: infinite loop. To exit, must call a break.
+
+x0 <- 1
+tol <- 1e-8
+
+repeat {
+	x1 <- computeEstimate() #not a function
+
+	if(abs(x1 - x0) < tol) {
+		break
+	} else {
+		x0 <- x1
+	}
+}
