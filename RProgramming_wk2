@@ -228,3 +228,20 @@ myplot <- function(x, y, type = "l", ...) {
 	plot(x, y, type = type, ...)
 }
 mean
+##
+#used after. the list must be named
+args(paste)
+args(cat)
+paste("a", "b", sep = ":")
+paste("a", "b", se = ":")
+
+################################
+# Scoping Rules - Symbol Binding
+################################
+
+lm <- function(x) { x * x }
+lm
+search()
+function()
+
+# Scoping Rules: determine how a value is associated with a free variable in a function.
