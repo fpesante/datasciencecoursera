@@ -206,3 +206,25 @@ function (formula, data, subset, weights, na.action,
 ####
 lm(data = mydata, y ~ x, model = FALSE, 1:100)
 lm(y ~ x, mydata, 1:100, model = FALSE)
+####
+#Defining a function
+
+f <- function(a, b = 1, c = 2, d = NULL) {
+}
+
+#Lazy Evaluation
+f <- function(a, b) {
+	a^2
+}
+f(2)
+##
+f <- function(a, b) {
+	print(a)
+	print(b)
+}
+f(45)
+##... argument##
+myplot <- function(x, y, type = "l", ...) {
+	plot(x, y, type = type, ...)
+}
+mean
