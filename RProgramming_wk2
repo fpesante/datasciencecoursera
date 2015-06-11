@@ -178,3 +178,31 @@ columnmean <- function(y, removeNA = TRUE) {
 }
 columnmean(airquality)
 columnmean(airquality, FALSE)
+
+###########
+# Functions
+###########
+
+Named arguments (default values)
+Formal arguments are the arguments included in the function definition
+
+f <- function (<arguments>) {
+        ## Do something interesting
+}
+#####
+mydata <- rnorm(100)
+sd(mydata)
+sd(x = mydata)
+sd(x = mydata, na.rm = FALSE)
+sd(na.rm = FALSE, x = mydata)
+sd(na.rm = FALSE, mydata)
+######
+Arguments matching; otherwise goes on default
+args(lm)
+function (formula, data, subset, weights, na.action,
+          method = "qr", model = TRUE, x = FALSE,
+          y = FALSE, qr = TRUE, singular.ok = TRUE,
+          contrasts = NULL, offset, ...)
+####
+lm(data = mydata, y ~ x, model = FALSE, 1:100)
+lm(y ~ x, mydata, 1:100, model = FALSE)
