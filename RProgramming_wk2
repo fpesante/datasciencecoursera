@@ -247,3 +247,26 @@ function()
 # Scoping Rules: determine how a value is associated with a free variable in a function.
 
 min 5:30
+
+##########################
+# Programming assignment 1
+##########################
+getwd()
+setwd("C:/Users/Paco/Documents/R_Studio_Repository/specdata")
+list.files()
+m <-("C:/Users/Paco/Documents/R_Studio_Repository/specdata")
+###########
+
+pollutantmean <- function(m, nitrate, id = 1:332) {
+    data = numeric()
+    for (i in id) {
+
+        newRead = read.csv(paste(m, "/", formatC(i, width = 3, flag = "0"), 
+            ".csv", sep = ""))
+
+        data = c(data, newRead[[nitrate]])
+    }
+    return(mean(data, na.rm = TRUE))
+}
+pollutantmean(m, nitrate, 10)
+http://rstudio-pubs-static.s3.amazonaws.com/16516_9e0442d454024914ae55020d9e21d5ef.html
