@@ -1,0 +1,37 @@
+Ref to Programming Assignment 2
+https://github.com/rdpeng/ProgrammingAssignment2/pull/82/files?short_path=04c6e90
+
+#################
+# Loops functions
+#################
+
+lapply
+	split
+sapply
+apply
+tapply
+mapply
+
+lapply
+	x <- list(a = 1:5, b = rnorm(10))
+	lapply(x, mean)
+	-------------
+	x <- list(a = 1:4, b = rnorm(10), c = rnorm(20, 1), d = rnorm(100, 5))
+	lapply(x, mean)
+	-------------
+	x <- 1:4
+	lapply(x, runif)
+	-------------
+	x <- 1:4
+	lapply(x, runif, min = 0, max = 10)
+	-------------
+	x <- list(a = matrix(1:4, 2, 2), b = matrix(1:6, 3, 2))
+	x
+	-------------
+	lapply(x, function(elt) elt[,1])
+
+sapply
+	x <- list(a = 1:4, b = rnorm(10), c = rnorm(20, 1), d = rnorm(100, 5))
+	lapply(x, mean)
+	sapply(x, mean)
+	mean(x) #error
