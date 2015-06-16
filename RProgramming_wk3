@@ -5,14 +5,14 @@ https://github.com/rdpeng/ProgrammingAssignment2/pull/82/files?short_path=04c6e9
 # Loops functions
 #################
 
-lapply
-	split
-sapply
-apply
-tapply
-mapply
+#lapply:Loop over a list and evaluate a function on each element. Returns a list, regardless of the input.
+	split: auxiliary function of lapply
+#sapply: Same as lapply but try to simplify the result
+#apply: To evaluate a function over the margins of an array. Used to apply a function to the rows or columns of a matrix. Not to fast. Easier to write.
+#tapply: Apply a function over subsets of a vector
+#mapply: Multivariate version of lapply
 
-lapply
+#lapply
 	x <- list(a = 1:5, b = rnorm(10))
 	lapply(x, mean)
 	-------------
@@ -30,8 +30,31 @@ lapply
 	-------------
 	lapply(x, function(elt) elt[,1])
 
-sapply
+#sapply
 	x <- list(a = 1:4, b = rnorm(10), c = rnorm(20, 1), d = rnorm(100, 5))
 	lapply(x, mean)
 	sapply(x, mean)
 	mean(x) #error
+
+#apply
+	str(apply)
+	?str
+
+	x <- matrix(rnorm(200), 20, 10)
+	apply(x, 2, mean)
+	apply(x, 1, sum)
+	
+	#col/row sums and means. Special functions
+	rowSums = apply(x, 1, sum)
+	rowMeans = apply(x, 1, mean)
+	colSums = apply(x, 2, sum)
+	colMeans = apply(x, 2, mean)
+	
+	#Quantiles of the rows of a matrix
+	x <- matrix(rnorm(200), 20, 10)
+	apply(x, 1, quantile, probs = c(0.25, 0.75))
+	
+	#Average matrix in an array
+	a <- array(rnorm(2 * 2 * 10), c(2, 2, 10))
+	apply(a, c(1, 2), mean)
+	rowMeans(a, dims = 2)
