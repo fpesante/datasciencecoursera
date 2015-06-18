@@ -58,3 +58,67 @@ https://github.com/rdpeng/ProgrammingAssignment2/pull/82/files?short_path=04c6e9
 	a <- array(rnorm(2 * 2 * 10), c(2, 2, 10))
 	apply(a, c(1, 2), mean)
 	rowMeans(a, dims = 2)
+
+##########################
+# Loops Functions - mapply
+##########################
+
+#mapply: a multivariate apply of sorts which applies a function in parallel over a set of arguments. Apply a function to 2 list.
+
+str(mapply)
+
+#FUN is a function to apply
+#... contains arguments to apply over
+#MoreArgs is a list of other arguments to FUN.
+#SIMPLIFY indicates whether the result should be simplified
+
+list(rep(1, 4), rep(2, 3), rep(3, 2), rep(4, 1))
+mapply(rep, 1:4, 4:1)
+
+#Vectorizing a function
+noise <- function(n, mean, sd) {
+rnorm(n, mean, sd)
+}
+
+noise(5, 1, 2)
+noise(1:5, 1:5, 2)
+
+#Instant vectorization
+mapply(noise, 1:5, 1:5, 2)
+
+list(noise(1, 1, 2), noise(2, 2, 2),
+noise(3, 3, 2), noise(4, 4, 2),
+noise(5, 5, 2))
+
+##########################
+# Loops Functions - tapply
+##########################
+
+tapply: used to apply a function over subsets of a vector. I don’t know why it’s called tapply.
+str(tapply)
+
+#X is a vector
+#INDEX is a factor or a list of factors (or else they are coerced to factors)
+#FUN is a function to be applied
+#... contains other arguments to be passed FUN
+#simplify, should we simplify the result?
+
+x <- c(rnorm(10), runif(10), rnorm(10, 1))
+f <- gl(3, 10)
+f
+tapply(x, f, mean)	#take group means
+tapply(x, f, mean, simplify = FALSE)	#take group means without simplification
+tapply(x, f, range)	#find group range
+
+#########################
+# Loops Functions - split
+#########################
+
+#split: takes a vector or other objects and splits it into groups determined by a factor or list of factors.
+
+str(split)
+
+#x is a vector (or list) or data frame
+#f is a factor (or coerced to one) or a list of factors
+#drop indicates whether empty factors levels should be dropped
+ min: 0:15
