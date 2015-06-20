@@ -121,4 +121,8 @@ str(split)
 #x is a vector (or list) or data frame
 #f is a factor (or coerced to one) or a list of factors
 #drop indicates whether empty factors levels should be dropped
- min: 0:15
+	x <- c(rnorm(10), runif(10), rnorm(10, 1))
+	f <- gl(3, 10)
+	split(x, f)		#spliting the vector in three parts 
+ 
+ min: 1:25
